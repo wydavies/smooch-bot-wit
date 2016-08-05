@@ -12,7 +12,8 @@ A [Smooch](https://app.smooch.io/signup) bot that integrates with [Wit.ai](https
 
 ## Getting started
 
-To install dependencies:
+After extracting the repository to a local folder you will need to install dependencies.
+Go into the local folder you created and type:
 
 ```
 $ npm install
@@ -31,6 +32,17 @@ ngrok http 8445
 
 This will create an ngrok.io URL for you to use to set the following environment variables:
 
+```
+
+SMOOCH_APP_TOKEN
+SMOOCH_KEY_ID
+SMOOCH_SECRET
+WIT_TOKEN
+SERVICE_URL
+
+```
+
+If running on Linux or a Mac set up the environment variables using the following syntax (replacing 'xxxx' with the values):
 
 ```
 export SMOOCH_APP_TOKEN=xxxx
@@ -40,11 +52,18 @@ export WIT_TOKEN=xxxx
 export SERVICE_URL=http://6a72fa86.ngrok.io
 ```
 
-Start the app:
+If running on Windows use the envvars.bat batch file and enter the information as prompted
 
+
+Start the app:
 ```
 $ npm start
 ```
+
+On Windows you can use the 'runchatbot.bat' batch file. This will prompt you to update the ngrok url (changes everytime you run ngrok)
+and then starts the chatbot.
+You may need to edit the batch file to change the folder name to match where you extracted the code to.
+
 
 To test the app either visit the ngrok.io URL or http://localhost:8445 (the default port).
 
